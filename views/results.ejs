@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pixabay Search (Express Version) </title>
+    </head>
+    <body>
+
+        <h1> Pixabay Search Results </h1>
+        
+        <form action="/results">
+            
+            Keyword: <input type="text" name="keyword">
+            Orientation: <select id="orientation" name="orientation">
+              <option value="">Select One</option>
+              <option value="horizontal">Horizontal</option>
+              <option value="vertical">Vertical<option> 
+            </select>
+            <button> Search! </button>
+            
+        </form> <br>
+        
+        <div class="gallery"> 
+            <div class="desc"> 
+                Likes: <%=images.hits[0].likes %>
+            </div>
+            <img src="<%= images.hits[0].largeImageURL %>"width='250'/> 
+        </div>
+        <div class="gallery"> 
+            <div class="desc"> 
+                Likes: <%=images.hits[1].likes %>
+            </div>
+            <img src="<%= images.hits[1].largeImageURL %>"width='250'/> 
+        </div>
+        <div class="gallery"> 
+            <div class="desc"> 
+                Likes: <%=images.hits[2].likes %>
+            </div>
+            <img src="<%= images.hits[2].largeImageURL %>"width='250'/> 
+        </div>
+        <div class="gallery"> 
+            <div class="desc"> 
+                Likes: <%=images.hits[3].likes %>
+            </div>
+            <img src="<%= images.hits[3].largeImageURL %>"width='250'/> 
+        </div>
+
+    </body>
+</html>
